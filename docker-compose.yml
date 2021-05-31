@@ -2,7 +2,7 @@ version: '3'
 services:
  mysql-lifaj:
    container_name: mysql-lifaj
-   image: 625749438897.dkr.ecr.ap-northeast-1.amazonaws.com/lifapp:latest
+   build: .mysql
    env_file: ./mysql/mysql.env
    environment:
      - TZ=Asia/Tokyo
