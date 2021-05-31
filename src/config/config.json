@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "w2YgaNKe",
+    "database": "lifaj",
+    "host": "mysql-lifaj",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "w2YgaNKe",
+    "database": "lifaj",
+    "host": "mysql-lifaj",
+    "port": "3306",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "w2YgaNKe",
+    "database": "lifaj",
+    "host": "mysql-lifaj",
+    "port": "3306",
+    "dialect": "mysql"
+  }
+}

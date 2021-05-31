@@ -1,0 +1,660 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+}
+
+.content-title {
+    text-align: center;
+    color: #b59a67;
+    font-size: 100px;
+    line-height: 120px;
+    overflow-wrap: break-word;
+}
+
+.content-subtitle {
+    text-align: center;
+    color: #b59a67;
+    font-size: 28px;
+    line-height: 49px;
+}
+
+@media screen and (max-width: 1549px) {
+    .content-title {
+        font-size: 90px;
+        line-height: 110px;
+    }
+    
+    .content-subtitle {
+        font-size: 25px;
+        line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 1219px) {
+    .content-title {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    
+    .content-subtitle {
+        font-size: 28px;
+        line-height: 49px;
+    }
+}
+
+.yumincho {
+    font-family: YuMincho, "Yu Mincho", serif;
+}
+
+.yugothic {
+    font-family: YuGothic, "Yu Gothic", sans-serif;
+}
+
+.cormorant-infant {
+    font-family: "Cormorant Infant", serif;
+}
+
+.fontweight-light {
+    font-weight: 300;
+}
+
+.fontweight-regular {
+    font-weight: 400;
+}
+
+.fontweight-medium {
+    font-weight: 500;
+}
+
+.fontweight-semibold {
+    font-weight: 600;
+}
+
+.fontweight-bold {
+    font-weight: bold;
+}
+
+
+/* ヘッダー */
+header {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    width: calc(100% - 209px);
+    height: 185px;
+    -webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    padding: 0 59px 0 150px;
+    background-color: #586166;
+}
+
+#toplogo {
+    display: block;
+    width: 274px;
+    height: auto;
+    cursor: pointer;
+}
+
+#toplogo-normal {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#toplogo-sp {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+#topnav {
+    margin-left: auto;
+}
+
+#topnav ul:first-child {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    height: 55px;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+.nav-item-anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    line-height: 49px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-item-anchor::after {
+    display: block;
+    content: "";
+    width: 68px;
+    height: 6px;
+    background-color: #9ae6e4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    opacity: 0;
+}
+
+.nav-item-anchor:hover::after {
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
+#nav-salon,
+#nav-menu {
+    margin-right: 52px;
+}
+
+#nav-company {
+    margin-right: 40px;
+}
+
+#nav-login {
+    width: 163px;
+    background-color: #586166;
+    margin-right: 10px;
+    font-size: 14.18px;
+    border: 1px solid white;
+}
+
+#nav-login img {
+    display: block;
+    width: 17.17px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 6px;
+    left: 32px;
+    margin: auto;
+}
+
+#nav-contact {
+    width: 220px;
+    background-image: linear-gradient(90deg, #51cfd3, #29bcc9);
+    font-size: 14.18px;
+}
+
+#nav-login a,
+#nav-contact a {
+    line-height: 55px;
+}
+
+#hamburger-button {
+    display: none;
+    width: 58.4889px;
+    height: 50.1334px;
+    cursor: pointer;
+    margin-left: 34px;
+}
+
+#nav-sp {
+    display: none;
+    width: 40%;
+    position: absolute;
+    right: 0;
+    top: 105px;
+    background-color: rgba(255, 255, 255, 0.7);
+    list-style: none;
+    z-index: 5;
+}
+
+#nav-sp li a {
+    color: #586166;
+}
+
+@media screen and (max-width: 1549px) {
+    header {
+        width: calc(100% - 70px);
+        padding: 0 30px 0 40px;
+    }
+
+    .nav-item {
+        font-size: 20px;
+    }
+
+    .nav-item-anchor::after {
+        width: 48px;
+    }
+
+    #nav-salon,
+    #nav-menu {
+        margin-right: 22px;
+    }
+
+    #nav-company {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 1219px) {
+    header {
+        width: calc(100% - 55px);
+        height: 158px;
+        padding: 0 20px 0 35px;
+    }
+
+    #toplogo {
+        width: 238px;
+        height: 25px;
+    }
+    
+    #toplogo-normal {
+        display: none;
+    }
+    
+    #toplogo-sp {
+        display: block;
+    }
+
+    #nav-salon,
+    #nav-menu,
+    #nav-company {
+        display: none;
+    }
+
+    #nav-login {
+        width: 139px;
+        height: 68.5px;
+        margin-right: 8px;
+        font-size: 22px;
+    }
+
+    #nav-login img {
+        left: 8px;
+    }
+    
+    #nav-contact {
+        width: 167.5px;
+        height: 68.5px;
+        font-size: 22px;
+    }
+
+    #nav-login a,
+    #nav-contact a {
+        line-height: 70px;
+    }
+
+    #hamburger-button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        width: calc(100% - 16px);
+        padding: 0 8px;
+    }
+
+    #toplogo {
+        width: 27%;
+        height: auto;
+    }
+
+    #topnav {
+        width: 55%;
+    }
+
+    #nav-login {
+        width: calc(40% - 6px);
+        height: 45px;
+        margin-right: 8px;
+        font-size: 12px;
+        padding-right: 6px;
+    }
+
+    #nav-login a {
+        text-align: right;
+    }
+
+    #nav-login img {
+        left: 4px;
+    }
+    
+    #nav-contact {
+        width: 45%;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    #nav-login a,
+    #nav-contact a {
+        line-height: 45px;
+    }
+
+    #hamburger-button {
+        width: 10%;
+        height: auto;
+        margin-left: 8px;
+    }
+}
+
+
+/* メイン */
+#main {
+    width: calc(100% - 49px);
+    background-image: url("../images/content-background.png");
+    background-size: cover;
+    background-position: center top;
+    padding: 180px 24.5px 200px 24.5px;
+}
+
+#registration-form {
+    width: calc(100% - 54px);
+    max-width: 1346px;
+    padding: 80px 27px 105px 27px;
+    margin: 52px auto 0 auto;
+    background-color: white;
+    -moz-box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+#registration-form-container {
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+}
+
+#name-label {
+    color: #586166;
+    font-size: 32px;
+    line-height: 77.6px;
+}
+
+#email-label,
+#password-label,
+#password-conf-label,
+#age-label,
+#telnumber-label {
+    display: block;
+    color: #586166;
+    font-size: 32px;
+    line-height: 77.6px;
+    margin-top: 50px;
+}
+
+#name,
+#email,
+#password,
+#password-conf,
+#telnumber {
+    display: block;
+    width: calc(100% - 50px);
+    height: 50px;
+    padding: 30px 25px;
+    font-size: 32px;
+    line-height: 77.6;
+    color: #586166;
+    border-color: #2d2d2d;
+}
+
+#age {
+    display: inline-block;
+    width: calc(27% - 50px);
+    height: 50px;
+    padding: 30px 25px;
+    font-size: 32px;
+    line-height: 77.6;
+    color: #586166;
+    border-color: #2d2d2d;
+}
+
+#registration-form input[mode="failed"],
+#registration-form input[mode="failed"],
+#registration-form input[mode="failed"] {
+    border-color: red;
+}
+
+#age::-webkit-inner-spin-button,
+#age::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance:textfield;
+}
+
+#age-text {
+    display: inline;
+    color: #586166;
+    vertical-align: text-top;
+    font-size: 32px;
+    line-height: 77.6px;
+}
+
+#terms {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    margin-top: 75px;
+}
+
+#terms-check {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#terms-text {
+    color: #586166;
+    font-size: 32px;
+    line-height: 50px;
+    margin-left: 29px;
+}
+
+#terms-text a {
+    color: #72dcd9;
+    text-decoration: none;
+}
+
+#terms-text a:hover {
+    text-decoration: underline;
+}
+
+#registration-button {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    width: 100%;
+    height: 110px;
+    font-size: 32px;
+    color: white;
+    background-color: #586166;
+    border: none;
+    margin-top: 47px;
+    cursor: pointer;
+    -webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#registration-button:hover {
+    transition: opacity 0.2s;
+    opacity: 0.8;
+}
+
+#gotologin {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    width: 100%;
+    height: 110px;
+    background-color: #72dcd9;
+    font-size: 32px;
+    line-height: 35px;
+    text-decoration: none;
+    color: white;
+    margin-top: 113px;
+    cursor: pointer;
+    -webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+#gotologin:hover {
+    transition: opacity 0.2s;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1219px) {
+    #main {
+        padding-top: 127px;
+        padding-bottom: 130px;
+    }
+
+    #registration-form {
+        margin-top: 68px;
+        padding-top: 77px;
+        padding-bottom: 80px;
+    }
+}
+
+/* footer */
+footer {
+    width: 100%;
+    background-color: #586166;
+    position: relative;
+    padding-top: 100px;
+}
+
+#footer-nav {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    list-style: none;
+    width: 911px;
+    margin: 0 auto;
+}
+
+#footer-nav li a {
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+    -webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#footer-nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.2s;
+}
+
+#footer-nav-salon {
+    width: 210px;
+    border-right: 2px solid white;
+}
+
+#footer-nav-menu {
+    width: 190px;
+    border-right: 2px solid white;
+}
+
+#footer-nav-company {
+    width: 255px;
+    border-right: 2px solid white;
+}
+
+#footer-nav-contact {
+    width: 250px;
+}
+
+#copyright {
+    display: block;
+    width: 100%;
+    color: #cbcbcb;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    padding: 62px 0 22px 0;
+}
+
+@media screen and (max-width: 1549px) {
+    #copyright {
+        font-size: 20px;
+        line-height: 42px;
+    }
+}
+
+@media screen and (max-width: 1219px) {
+    footer {
+        padding-top: 125px;
+    }
+
+    #footer-nav {
+        display: block;
+        width: calc(100% - 100px);
+        padding: 0 50px;
+    }
+    
+    #footer-nav li a {
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        line-height: 80px;
+    }
+    
+    #footer-nav li a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: background-color 0.2s;
+    }
+    
+    #footer-nav-salon {
+        width: 100%;
+        border-right: none;
+    }
+    
+    #footer-nav-menu {
+        width: 100%;
+        border-right: none;
+    }
+    
+    #footer-nav-company {
+        width: 100%;
+        border-right: none;
+    }
+    
+    #footer-nav-contact {
+        width: 100%;
+    }
+    
+    #copyright {
+        padding: 54px 0 38px 0;
+    }
+}

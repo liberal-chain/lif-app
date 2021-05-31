@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LIF AZABU JUBAN -LOGIN-</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/login.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="scripts/login.js" defer></script>
+</head>
+
+<body>
+<header>
+    <a id="toplogo" href="/">
+        <img id="toplogo-normal" src="images/logo.png" alt="">
+        <img id="toplogo-sp" src="images/logo-sp.png" alt="">
+    </a>
+    <nav id="topnav">
+        <ul>
+            <li id="nav-salon" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#salon">SALON</a></li>
+            <li id="nav-menu" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../menu">MENU</a></li>
+            <li id="nav-company" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#company">COMPANY</a></li>
+            <li id="nav-login" class="nav-item yumincho fontweight-semibold">
+                <a class="nav-item-anchor" href=""><img src="images/icon-navlogin.svg" alt="">LOGIN</a>
+            </li>
+            <li id="nav-contact" class="nav-item yumincho fontweight-semibold"><a class="nav-item-anchor" href="">CONTACT</a></li>
+        </ul>
+        <ul id="nav-sp">
+            <li id="nav-salon-sp" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#salon">SALON</a></li>
+            <li id="nav-menu-sp" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../menu/">MENU</a></li>
+            <li id="nav-company-sp" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#company">COMPANY</a></li>
+        </ul>
+    </nav>
+    <a id="hamburger-button" mode="0">
+        <img src="images/hamburger.svg" alt="">
+    </a>
+</header>
+
+<section id="main">
+    <h1 class="content-title cormorant-infant fontweight-medium">LOGIN</h1>
+    <p class="content-subtitle yumincho fontweight-medium">ログイン</p>
+    <form id="login-form" method="POST">
+        <div id="login-form-container">
+            <p id="registration" class="yugothic fontweight-bold">
+                新規の方は <a id="registration-link" href="../registration/">新規登録</a>
+            </p>
+            <input id="email" class="yugothic fontweight-medium" name="email" type="email" placeholder="メールアドレス">
+            <input id="password" class="yugothic fontweight-medium" name="password" type="password" placeholder="パスワード">
+            <div id="login-form-action">
+                <input id="autologin" type="checkbox">
+                <p id="autologin-text" class="yugothic fontweight-medium">ログイン状態を保存する</p>
+                <input id="loginbutton" class="yugothic fontweight-medium" type="button" value="LOGIN">
+            </div>
+        </div>
+    </form>
+    <a id="forget-password" class="yugothic fontweight-medium" href="">パスワードをお忘れですか？</a>
+    <a id="gotohome" class="yugothic fontweight-medium" href="../">&larr;ホームへ戻る</a>
+</section>
+
+<footer>
+    <ul id="footer-nav">
+        <li id="footer-nav-salon" class="cormorant-infant fontweight-semibold">
+            <a href="../#salon">SALON</a>
+        </li>
+        <li id="footer-nav-menu" class="cormorant-infant fontweight-semibold">
+            <a href="../menu/">MENU</a>
+        </li>
+        <li id="footer-nav-company" class="cormorant-infant fontweight-semibold">
+            <a href="../#company">COMPANY</a>
+        </li>
+        <li id="footer-nav-contact" class="cormorant-infant fontweight-semibold">
+            <a>CONTACT</a>
+        </li>
+    </ul>
+    <small id="copyright" class="yumincho fontweight-medium">(C) LIF AZABU JUBAN. ALL RIGHTS RESERVED. </small>
+</footer>
+</body>
+</html>

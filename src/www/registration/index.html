@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LIF AZABU JUBAN -REGISTRATION-</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/registration.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="scripts/registration.js" defer></script>
+</head>
+
+<body>
+<header>
+    <a id="toplogo" href="/">
+        <img id="toplogo-normal" src="images/logo.png" alt="">
+        <img id="toplogo-sp" src="images/logo-sp.png" alt="">
+    </a>
+    <nav id="topnav">
+        <ul>
+            <li id="nav-salon" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#salon">SALON</a></li>
+            <li id="nav-menu" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../menu">MENU</a></li>
+            <li id="nav-company" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#company">COMPANY</a></li>
+            <li id="nav-login" class="nav-item yumincho fontweight-semibold">
+                <a class="nav-item-anchor" href="../login/"><img src="images/icon-navlogin.svg" alt="">LOGIN</a>
+            </li>
+            <li id="nav-contact" class="nav-item yumincho fontweight-semibold"><a class="nav-item-anchor" href="">CONTACT</a></li>
+        </ul>
+        <ul id="nav-sp">
+            <li id="nav-salon-sp" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#salon">SALON</a></li>
+            <li id="nav-menu-sp" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../menu/">MENU</a></li>
+            <li id="nav-company-sp" class="nav-item cormorant-infant fontweight-semibold"><a class="nav-item-anchor" href="../#company">COMPANY</a></li>
+        </ul>
+    </nav>
+    <a id="hamburger-button" mode="0">
+        <img src="images/hamburger.svg" alt="">
+    </a>
+</header>
+
+<section id="main">
+    <h1 class="content-title cormorant-infant fontweight-medium">REGISTRATION</h1>
+    <p class="content-subtitle yumincho fontweight-medium">会員登録</p>
+    <form id="registration-form" class="yugothic fontweight-medium" method="POST">
+        <div id="registration-form-container">
+             <label id="name-label" for="name">氏名</label>
+             <input id="name" name="name" type="text" placeholder="山田花子">
+             <label id="email-label" for="email">メールアドレス</label>
+             <input id="email" name="email" type="email" placeholder="example@gmail.com">
+             <label id="password-label" for="password">パスワード</label>
+             <input id="password" name="password" type="password" placeholder="8文字以上">
+             <label id="password-conf-label" for="password_conf">パスワード(確認)</label>
+             <input id="password-conf" name="password_conf" type="password">
+             <label id="age-label" for="age">年齢</label>
+             <input id="age" name="age" type="number">
+             <p id="age-text">歳</p>
+             <label id="telnumber-label" for="telnumber">電話番号</label>
+             <input id="telnumber" name="telnumber" type="tel" placeholder="08012345678">
+             <div id="terms">
+                <input id="terms-check" type="checkbox">
+                <p id="terms-text" class="fontweight-bold"><a href="">利用規約・プライバシーポリシー</a>に同意する</p>
+             </div>
+             <input id="registration-button" type="button" value="登録する">
+             <a id="gotologin" class="fontweight-bold" href="../login/">アカウントをお持ちの場合はログイン</a>
+        </div>
+    </form>
+</section>
+
+<footer>
+    <ul id="footer-nav">
+        <li id="footer-nav-salon" class="cormorant-infant fontweight-semibold">
+            <a href="../#salon">SALON</a>
+        </li>
+        <li id="footer-nav-menu" class="cormorant-infant fontweight-semibold">
+            <a href="../menu/">MENU</a>
+        </li>
+        <li id="footer-nav-company" class="cormorant-infant fontweight-semibold">
+            <a href="../#company">COMPANY</a>
+        </li>
+        <li id="footer-nav-contact" class="cormorant-infant fontweight-semibold">
+            <a>CONTACT</a>
+        </li>
+    </ul>
+    <small id="copyright" class="yumincho fontweight-medium">(C) LIF AZABU JUBAN. ALL RIGHTS RESERVED. </small>
+</footer>
+</body>
+</html>

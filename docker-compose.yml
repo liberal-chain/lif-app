@@ -1,0 +1,41 @@
+version: '3'
+services:
+ mysql-lifaj:
+   container_name: mysql-lifaj
+   image: 625749438897.dkr.ecr.ap-northeast-1.amazonaws.com/lifapp:latest
+   env_file: ./mysql/mysql.env
+   environment:
+     - TZ=Asia/Tokyo
+   ports:
+     - '3306:3306'
+   volumes:
+     - ./mysql/data:/var/lib/mysql
+     - ./mysql/sql:/docker-entrypoint-initdb.d
+   networks:
+     - default
+ lifaj:
+   container_name: lifaj
+   image: node:12.16.1-slim
+   env_file: ./app.env
+   environment:
+     - TZ=Asia/Tokyo
+     - DEBUG=app:*
+   tty: true
+   ports:
+     - '3000:3000'
+   volumes:
+     - ./src:/app
+   working_dir: /app
+   command: >
+    bash -c "npm install &&
+    npm install sequelize-cli -g &&
+    npx sequelize-cli db:migrate &&
+    npm start"
+   networks:
+     - default
+   depends_on:
+     - mysql-lifaj
+networks:
+ default:
+volumes:
+ mysqldata:
