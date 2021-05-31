@@ -2,7 +2,7 @@ version: '3'
 services:
  mysql-lifaj:
    container_name: mysql-lifaj
-   build: .mysql
+   build: ./mysql
    env_file: ./mysql/mysql.env
    environment:
      - TZ=Asia/Tokyo
